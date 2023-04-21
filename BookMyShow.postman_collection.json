@@ -1,0 +1,604 @@
+{
+	"info": {
+		"_postman_id": "1ccdc6f1-8561-419c-a3b6-8fa13ba68d15",
+		"name": "BookMyShow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2582425"
+	},
+	"item": [
+		{
+			"name": "CreateMovie1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Titanic\",\n    \"director\": \"James Cameroon\",\n    \"length\": 180\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/movie/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"movie",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/movie/3",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"movie",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateCity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Vancouver",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/city/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"city",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/city/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"city",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Bob",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "bob@yahoo.com",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "CU",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/user/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/user/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"user",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTheatre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "AMC Downtown",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "1100 University St",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Vancouver",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/theatre/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"theatre",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTheatre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/theatre/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"theatre",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateScreen",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Screen 1",
+							"type": "text"
+						},
+						{
+							"key": "theatre",
+							"value": "AMC Downtown",
+							"type": "text"
+						},
+						{
+							"key": "seat_layout",
+							"value": "1 1 V,1 2 G,1 3 S ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/screen/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"screen",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetScreen",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/screen/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"screen",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateShow",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "movie_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "screen_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "start_time",
+							"value": "2023-04-20T09:00:00",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "2023-04-20T12:00:00",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/show/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"show",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetShow",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/show/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"show",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateShowSeat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "Vip_Price",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "Gold_Price",
+							"value": "80",
+							"type": "text"
+						},
+						{
+							"key": "Silver_Price",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/show/1/seat/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"show",
+						"1",
+						"seat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HoldShowSeat",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"seats\": [1,2],\n    \"status\": \"ON_HOLD\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/show/1/seat/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"show",
+						"1",
+						"seat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAvailableSeats",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/show/1/seat/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"show",
+						"1",
+						"seat",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreatePayment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 180,\n    \"external_ref_id\": 1122\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/payment/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"payment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetPayment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/payment/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"payment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTicket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customer_id\": 1,\n    \"seat_ids\": [1,2],\n    \"payment_ids\": [1]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/portal/ticket/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"ticket",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTicket",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/portal/ticket/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portal",
+						"ticket",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
