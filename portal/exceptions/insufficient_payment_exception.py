@@ -1,0 +1,2 @@
+class InsufficientPaymentException(Exception):
+    pass

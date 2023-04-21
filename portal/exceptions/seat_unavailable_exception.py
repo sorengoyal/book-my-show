@@ -1,0 +1,2 @@
+class SeatUnavailableException(Exception):
+    pass
